@@ -1,7 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --cyan: hsl(158, 36%, 37%);
+  --dark-cyan: hsl(158, 42%, 18%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --greyish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: var(--cream);
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.wrapper {
+  margin: 2.8rem 1.6rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  padding: 2.4rem;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.title,
+.reduced-price {
+  font-family: 'Fraunces', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.title {
+  color: var(--dark-blue);
+  line-height: 100%;
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  margin: 1.6rem 0 2.4rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.reduced-price {
+  color: var(--cyan);
+  margin-right: 1.9rem;
+}
+
+.original-price {
+  font-size: 1.3rem;
+  text-decoration: line-through;
+}
+
+.category,
+.description,
+.original-price {
+  color: var(--greyish-blue);
+}
+
+.btn-add-to-card {
+  color: var(--white);
+  background-color: var(--cyan);
+  padding: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  border-radius: 0.8rem;
+  transition: background 0.3s ease-out;
+}
+
+.btn-add-to-card:hover {
+  cursor: pointer;
+  background-color: var(--dark-cyan);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  margin-right: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    display: flex;
+    max-width: 600px;
+  }
+
+  .product-img,
+  .content-wrapper {
+    width: 50%;
+  }
+
+  .product-img img {
+    height: 100%;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
