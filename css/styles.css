@@ -143,5 +143,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3.2rem;
+  }
+
+  .category {
+    line-height: 1;
+    margin-bottom: 2rem;
   }
 }
